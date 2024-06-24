@@ -90,6 +90,7 @@ function init() {
 
 function showQuestion() {
     let question = questions[currentQuestion];
+    document.getElementById('current_question').innerText = currentQuestion + 1;
     document.getElementById('questiontext').innerHTML = question.question;
     document.getElementById('answer_1').innerHTML = question.answer_1;
     document.getElementById('answer_2').innerHTML = question.answer_2;
@@ -110,4 +111,23 @@ function answer(selection) {
         document.getElementById(idOfRightAnswer).classList.add('bg-success');
     }
     document.getElementById('next-button').disabled = false;
+}
+
+function nextQuestion() {
+    currentQuestion++;
+    if (currentQuestion < questions.length) {
+        resetBackgrounds();
+        showQuestion();
+    } else {
+        console.log('Quiz beendet!');
+    }
+    
+    document.getElementById('next-button').disabled = true;
+}
+
+function resetBackgrounds() {
+    document.getElementById('answer_1').classList.remove('bg-success', 'bg-danger');
+    document.getElementById('answer_2').classList.remove('bg-success', 'bg-danger');
+    document.getElementById('answer_3').classList.remove('bg-success', 'bg-danger');
+    document.getElementById('answer_4').classList.remove('bg-success', 'bg-danger');
 }
