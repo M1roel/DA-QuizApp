@@ -98,5 +98,5 @@ function showQuestion() {
 }
 
 function answer(selection) {
-    
+    console.log('click');
 }
