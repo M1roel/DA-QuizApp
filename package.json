@@ -11,5 +11,6 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.3.3"
-  }
+  },
+  "devDependencies": {}
 }
