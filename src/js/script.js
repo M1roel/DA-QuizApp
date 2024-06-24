@@ -98,5 +98,15 @@ function showQuestion() {
 }
 
 function answer(selection) {
-    console.log('click');
+    let question = questions[currentQuestion];
+    let selectedQuestionNumber = parseInt(selection.slice(-1));
+    let idOfRightAnswer = `answer_${question['right_answer']}`;
+
+    if (selectedQuestionNumber === question['right_answer']) {
+        console.log('RICHTIG');
+        document.getElementById(selection).classList.add('bg-success');
+    } else {
+        document.getElementById(selection).classList.add('bg-danger');
+        document.getElementById(idOfRightAnswer).classList.add('bg-success');
+    }
 }
