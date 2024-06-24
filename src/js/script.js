@@ -109,4 +109,5 @@ function answer(selection) {
         document.getElementById(selection).classList.add('bg-danger');
         document.getElementById(idOfRightAnswer).classList.add('bg-success');
     }
+    document.getElementById('next-button').disabled = false;
 }
