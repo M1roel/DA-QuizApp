@@ -18,7 +18,7 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body>
+  <body onload="init()">
     <nav class="navbar bg-body-tertiary">
       <div class="container-fluid">
         <span class="navbar-brand mb-0 h1">QuizApp</span>
@@ -28,30 +28,30 @@
       <div class="card quiz-card">
         <img src="/public/img/question.jpg" class="card-img-top"/>
         <div class="card-body">
-          <h5 class="card-title">Frage</h5>
-          <div class="card mb-3">
+          <h5 class="card-title" id="questiontext">Frage</h5>
+          <div class="card mb-3" id="answer_1">
             <div class="card-body">
               Antwort
             </div>
           </div>
-          <div class="card mb-3">
+          <div class="card mb-3" id="answer_2">
             <div class="card-body">
               Antwort
             </div>
           </div>
-          <div class="card mb-3">
+          <div class="card mb-3" id="answer_3">
             <div class="card-body">
               Antwort
             </div>
           </div>
-          <div class="card mb-3">
+          <div class="card mb-3" id="answer_4">
             <div class="card-body">
               Antwort
             </div>
           </div>
           <div class="card-footer">
             <span>
-                <b>1</b> von <b>5</b> Fragen
+                <b id ="current_question"></b> von <b id="total_questions"></b> Fragen
             </span>
             <button type="button" class="btn btn-secondary">Secondary</button>
           </div>
