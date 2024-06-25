@@ -141,3 +141,14 @@ function resetBackgrounds() {
     document.getElementById('answer_3').classList.remove('bg-success', 'bg-danger');
     document.getElementById('answer_4').classList.remove('bg-success', 'bg-danger');
 }
+
+function restartGame() {
+    document.getElementById('header-img').src = '/public/img/question.jpg';
+    document.getElementById('endScreen').style = 'display: none';
+    document.getElementById('questionBody').style = '';
+
+    currentQuestion = 0;
+    countCorrectAnswers = 0;
+
+    init();    
+}
