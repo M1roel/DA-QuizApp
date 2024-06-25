@@ -90,6 +90,11 @@ function init() {
 }
 
 function showQuestion() {
+    let percent = (currentQuestion + 1) / questions.length;
+    percent = percent * 100;
+    document.getElementById('progress-bar').style.width = `${percent}%`;
+    document.getElementById('progress-bar').innerText = `${percent.toFixed(0)} %`;
+
     let question = questions[currentQuestion];
     document.getElementById('current_question').innerText = currentQuestion + 1;
     document.getElementById('questiontext').innerHTML = question.question;
