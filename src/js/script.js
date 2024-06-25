@@ -119,7 +119,8 @@ function nextQuestion() {
         resetBackgrounds();
         showQuestion();
     } else {
-        console.log('Quiz beendet!');
+        document.getElementById('endScreen').style = '';
+        document.getElementById('questionBody').style = 'display: none';
     }
     
     document.getElementById('next-button').disabled = true;
