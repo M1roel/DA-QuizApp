@@ -124,6 +124,7 @@ function nextQuestion() {
         document.getElementById('questionBody').style = 'display: none';
         document.getElementById('countCorrectAnswers').innerText = countCorrectAnswers;        
         document.getElementById('total').innerText = questions.length;
+        document.getElementById('header-img').src = '/public/img/brain_result.png';
     }
     
     document.getElementById('next-button').disabled = true;
